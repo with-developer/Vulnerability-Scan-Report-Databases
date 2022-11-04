@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maxinum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="static/css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		
+		<title>Post Board Of All</title>
+	</head>
+    <body>	
+		<div class="view" style="background-image: url(static/images/bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center; opacity: 1;">
+			<div class="row h-100">
+				<div class="col-sm-12 my-auto white-text text-center">
+					<div class="container">
+					{% if logininfo %}
+					<h5 style="text-shadow: 2px 2px black;"><font color="white" size=5>Welcome <strong>{{logininfo}}.</strong></font></h5>
+					{% endif %}
+					<hr style="border: solid 2px rgb(255, 255, 255); width:700px; margin-bottom: -12px">
+						<a class="display-2 text-white font-weight-bold"
+						style="text-shadow:0 5px black,5px 0 black;">Post Board Of All</a>
+					<!--<a class="text-center"><strong><font color="white" size=7>FLASK TEST PAGE</font></strong></a>-->
+					<hr style="border: solid 2px rgb(255, 255, 255); width:700px; margin-top:0px">
+					{% if logininfo %}
+					<a href="/post" style="text-shadow:2px 2px black;"><font color="white" size=6><strong>GET START&nbsp;</strong></font></a> <font color="white" size=6>&middot;&nbsp;</font>
+					<a href="/logout" style="text-shadow: 2px 2px black;"><font color="white" size=6><strong>LOGOUT</strong></font></a>
+					{% else %}   
+					<a href="/login" style="text-shadow: 2px 2px black;"><font color="white" size=6><strong>SIGN IN&nbsp;</strong></font></a> <font color="white" size=6>&middot;&nbsp;</font>
+					<a href="/regist" style="text-shadow: 2px 2px black;"><font color="white" size=6><strong>SIGN UP</strong></font></a>
+					{% endif %}
+				</div>
+				</div>
+			</div>
+    </body>
+</html>
